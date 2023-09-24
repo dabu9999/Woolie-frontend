@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#FF7595',
+        primary: '#6341EA',
+        'primary-pressed': '#4B30B6',
         kakao: '#FDDC3F',
         secondary: '#FFFFFF',
         background: '#FFFFFF',
@@ -22,6 +23,9 @@ module.exports = {
         'on-off': '#FFFFFF',
         banner: '#F5F5F5',
         'light-color': '#5B5B5B',
+        'warn-red': '#E31C1C',
+        'basic-black': '#333333',
+        'semi-black': '#666666',
       },
       opacity: {
         outline: '0.27',
