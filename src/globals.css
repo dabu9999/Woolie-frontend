@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
 html,
 body {
+  box-sizing: border-box;
 }
+
+div::-webkit-scrollbar {
+  width: 4px;  /* 스크롤바의 너비 */
+  height: 4px;
+}
+
+div::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #bebebe; /* 스크롤바의 색상 */
+  
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar-track {
+  background: rgba(112, 112, 112, 0.1);  /*스크롤바 뒷 배경 색상*/
+}
+
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
