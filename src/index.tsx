@@ -6,6 +6,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';
 import Main from './pages/Main';
 import { RecoilRoot } from 'recoil';
+import LoginHandler from './pages/LoginHandler';
+import ImageUpload from './pages/ImageUpload';
+import AnalysisResult from './pages/AnalysisResult';
+import AnalysisExample from './pages/AnalysisExample';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +17,30 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <p>에러</p>,
     children: [{ index: true, path: '/', element: <Main /> }],
+  },
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <p>에러</p>,
+    children: [{ index: true, path: 'login/oauth2/callback/kakao', element: <LoginHandler /> }],
+  },
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <p>에러</p>,
+    children: [{ index: true, path: 'imageupload', element: <ImageUpload /> }],
+  },
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <p>에러</p>,
+    children: [{ index: true, path: 'analysisresult', element: <AnalysisResult /> }],
+  },
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <p>에러</p>,
+    children: [{ index: true, path: 'analysisexample', element: <AnalysisExample /> }],
   },
 ]);
 
