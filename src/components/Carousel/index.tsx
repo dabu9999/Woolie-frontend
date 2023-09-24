@@ -67,7 +67,7 @@ const Carousel = ({ carouselList }: CarouselProps) => {
             return (
               <li
                 key={key}
-                className="flex flex-none items-center justify-center w-full overflow-hidden object-contain"
+                className="flex flex-none items-center justify-center w-full overflow-hidden object-contain select-none"
               >
                 <img src={image} alt="carousel-img" className="h-full w-full flex-shrink-0 object-contain" />
               </li>
