@@ -10,6 +10,7 @@ import LoginHandler from './pages/LoginHandler';
 import ImageUpload from './pages/ImageUpload';
 import AnalysisResult from './pages/AnalysisResult';
 import AnalysisExample from './pages/AnalysisExample';
+import LoginPage from './pages/Login';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,12 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <p>에러</p>,
     children: [{ index: true, path: '/', element: <Main /> }],
+  },
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <p>에러</p>,
+    children: [{ index: true, path: 'login', element: <LoginPage /> }],
   },
   {
     path: '/',
