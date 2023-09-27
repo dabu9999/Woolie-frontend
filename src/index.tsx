@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 // import reportWebVitals from './reportWebVitals';
 import Main from './pages/Main';
 import { RecoilRoot } from 'recoil';
@@ -11,6 +13,9 @@ import ImageUpload from './pages/ImageUpload';
 import AnalysisResult from './pages/AnalysisResult';
 import AnalysisExample from './pages/AnalysisExample';
 import LoginPage from './pages/Login';
+import HomePage from './pages/Home';
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -18,6 +23,12 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <p>에러</p>,
     children: [{ index: true, path: '/', element: <Main /> }],
+  },
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <p>에러</p>,
+    children: [{ index: true, path: '/home', element: <HomePage /> }],
   },
   {
     path: '/',
@@ -54,7 +65,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <RecoilRoot>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </RecoilRoot>,
 );
 
