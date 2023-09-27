@@ -1,19 +1,18 @@
 import { FaTimes } from 'react-icons/fa';
 import Carousel from '../../components/Carousel';
 import { Link } from 'react-router-dom';
+import image1 from '@public/analysisexample/눈 사이 길이.png';
+import image2 from '@public/analysisexample/눈 세로 길이.png';
+import image3 from '@public/analysisexample/대칭 비율.png';
+import image4 from '@public/analysisexample/미간 비율.png';
+import image5 from '@public/analysisexample/세로 비율.png';
+import image6 from '@public/analysisexample/얼굴형.png';
+import image7 from '@public/analysisexample/코 가로 길이.png';
+import image8 from '@public/analysisexample/턱 비율.png';
+import image9 from '@public/analysisexample/하안부 비율.png';
 
 const AnalysisExample = () => {
-  const exampleDataTitle = [
-    './얼굴형.png',
-    './하안부 비율.png',
-    './세로 비율.png',
-    './대칭 비율.png',
-    './미간 비율.png',
-    './눈 세로 길이.png',
-    './눈 사이 길이.png',
-    './코 가로 길이.png',
-    './턱 비율.png',
-  ];
+  const exampleDataTitle = [image1, image2, image3, image4, image5, image6, image7, image8, image9];
   return (
     <div className="flex flex-col font-light text-[13px] px-6 mt-14">
       <button className="ml-auto mb-10">
