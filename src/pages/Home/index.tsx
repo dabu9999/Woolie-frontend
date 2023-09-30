@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/Home/Button';
 import Carousel from '../../components/Home/Carousel';
 import { useEffect, useState } from 'react';
+import logo from '@public/home/logo2.png';
 import image1 from '@public/home/home1.png';
 import image2 from '@public/home/home2.png';
 import image3 from '@public/home/home3.png';
@@ -43,7 +44,7 @@ const HomePage = () => {
       >
         <div className="flex justify-between ">
           <div className="w-[96px] h-[16px]">
-            <img src="./logo2.png" alt="로고" />
+            <img src={logo} alt="로고" />
           </div>
           <div>
             <button className="font-medium text-[#FDFDFD] text-[13px]">
