@@ -6,7 +6,7 @@ import Modal from '../../components/Modal';
 import axios from 'axios';
 // import React from 'react';
 
-const LoginHandler = () => {
+const JoinPage = () => {
   const [allChecked, setAllchecked] = useState<boolean>(false);
   const [serviceTerm, setServiceTerm] = useState<boolean>(false);
   const [privateTerm, setPrivateTerm] = useState<boolean>(false);
@@ -249,4 +249,4 @@ const LoginHandler = () => {
   );
 };
 
-export default LoginHandler;
+export default JoinPage;
