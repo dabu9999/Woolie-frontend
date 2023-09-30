@@ -1,15 +1,15 @@
 import { FaTimes } from 'react-icons/fa';
 import Carousel from '../../components/Carousel';
 import { Link } from 'react-router-dom';
-import image1 from '@public/analysisexample/눈 사이 길이.png';
-import image2 from '@public/analysisexample/눈 세로 길이.png';
-import image3 from '@public/analysisexample/대칭 비율.png';
-import image4 from '@public/analysisexample/미간 비율.png';
-import image5 from '@public/analysisexample/세로 비율.png';
-import image6 from '@public/analysisexample/얼굴형.png';
-import image7 from '@public/analysisexample/코 가로 길이.png';
-import image8 from '@public/analysisexample/턱 비율.png';
-import image9 from '@public/analysisexample/하안부 비율.png';
+import image1 from '@public/analysisExample/눈 사이 길이.png';
+import image2 from '@public/analysisExample/눈 세로 길이.png';
+import image3 from '@public/analysisExample/대칭 비율.png';
+import image4 from '@public/analysisExample/미간 비율.png';
+import image5 from '@public/analysisExample/세로 비율.png';
+import image6 from '@public/analysisExample/얼굴형.png';
+import image7 from '@public/analysisExample/코 가로 길이.png';
+import image8 from '@public/analysisExample/턱 비율.png';
+import image9 from '@public/analysisExample/하안부 비율.png';
 
 const AnalysisExample = () => {
   const exampleDataTitle = [image1, image2, image3, image4, image5, image6, image7, image8, image9];
