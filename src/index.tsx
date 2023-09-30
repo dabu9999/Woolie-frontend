@@ -1,53 +1,76 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-// import reportWebVitals from './reportWebVitals';
-import Main from './pages/Main';
-import { RecoilRoot } from 'recoil';
-import LoginHandler from './pages/LoginHandler';
-import ImageUpload from './pages/ImageUpload';
-import AnalysisResult from './pages/AnalysisResult';
-import AnalysisExample from './pages/AnalysisExample';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <p>에러</p>,
-    children: [{ index: true, path: '/', element: <Main /> }],
-  },
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <p>에러</p>,
-    children: [{ index: true, path: 'login/oauth2/callback/kakao', element: <LoginHandler /> }],
-  },
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <p>에러</p>,
-    children: [{ index: true, path: 'imageupload', element: <ImageUpload /> }],
-  },
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <p>에러</p>,
-    children: [{ index: true, path: 'analysisresult', element: <AnalysisResult /> }],
-  },
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <p>에러</p>,
-    children: [{ index: true, path: 'analysisexample', element: <AnalysisExample /> }],
-  },
-]);
+// import reportWebVitals from './reportWebVitals';
+import { RecoilRoot } from 'recoil';
+import { RouterInfo } from './utils/router';
+// import App from './App';
+// import Main from './pages/Main';
+// import LoginHandler from './pages/LoginHandler';
+// import ImageUpload from './pages/ImageUpload';
+// import AnalysisResult from './pages/AnalysisResult';
+// import AnalysisExample from './pages/AnalysisExample';
+// import LoginPage from './pages/Login';
+// import HomePage from './pages/Home';
+
+const queryClient = new QueryClient();
+
+const router = createBrowserRouter(RouterInfo);
+
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: '/', element: <Main /> }],
+//   },
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: '/home', element: <HomePage /> }],
+//   },
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: 'login', element: <LoginPage /> }],
+//   },
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: 'login/oauth2/callback/kakao', element: <LoginHandler /> }],
+//   },
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: 'imageupload', element: <ImageUpload /> }],
+//   },
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: 'analysisresult', element: <AnalysisResult /> }],
+//   },
+//   {
+//     path: '/',
+//     element: <App />,
+//     errorElement: <p>에러</p>,
+//     children: [{ index: true, path: 'analysisexample', element: <AnalysisExample /> }],
+//   },
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <RecoilRoot>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} fallbackElement={<div>에러</div>} />
+    </QueryClientProvider>
   </RecoilRoot>,
 );
 
